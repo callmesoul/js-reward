@@ -1,0 +1,25 @@
+{
+  "name": "js-reward",
+  "version": "0.0.1",
+  "description": "nices user reward component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "reward",
+    "赞赏",
+    "打赏"
+  ],
+  "author": "CallMeSoul",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^8.1.0",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "postcss-loader": "^5.2.0",
+    "style-loader": "^2.0.0"
+  }
+}
