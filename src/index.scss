@@ -1,0 +1,281 @@
+
+
+.js-reward {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+	font-family: "Helvetica Neue", Ubuntu, "WenQuanYi Micro Hei", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.8em;
+	text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+	background: #fff;
+    img {
+        border-width: 0px;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: none;
+        outline: none;
+        border: none;
+    }
+    
+    .list,
+    .list li,
+    .list-left li {
+        list-style: none;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .pos-f {
+        position: fixed;
+    }
+    
+    .left-100 {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .blur #DonateText,
+    .blur #donateBox,
+    .blur #github {
+        -webkit-filter: blur(3px);
+        filter: blur(3px);
+    }
+    
+    .tr3 {
+        transition: all .3s;
+    }
+    
+    
+    .DonateText-warp{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        margin-left: 10px;
+        margin-bottom: 16px;
+            #DonateText {
+                font-size: 12px;
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+                color: #fff;
+                background: #ffd886 url(images/like.svg) no-repeat center 10px;
+                background-size: 20px;
+                border-radius: 35px;
+                text-align: center;
+            }
+    }
+    #donateBox {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        display: inline-block;
+        z-index: 1;
+        position: relative;
+
+        
+        li {
+            text-align: center;
+            border-left: 1px solid #ddd;
+            background: no-repeat center center;
+            background-color: rgba(204,217,220,0.1);
+            background-size: 45px;
+            transition: all .3s;
+            cursor: pointer;
+            overflow: hidden;
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+            opacity: 0.5;
+            display: inline-block;
+            &:hover {
+                background-color: rgba(204, 217, 220, 0.3);
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+                opacity: 1;
+            }
+        }
+    }
+    
+    
+    #donateBox>li:first-child {
+        border-width: 0;
+    }
+    
+    #donateBox a {
+        display: block;
+    }
+    
+    #donateBox #PayPal {
+        background-image: url(images/paypal.svg);
+    }
+    
+    #donateBox>#QQPay {
+        background-image: url(images/QQqianbao.png);
+        line-height: 28px;
+    }
+    
+    #donateBox>#QQPay:hover {
+        overflow: visible;
+    }
+    
+    #donateBox #AliPay {
+        background-image: url(images/alipay.svg);
+    }
+    
+    #donateBox #WeChat {
+        background-image: url(images/wechat.svg);
+    }
+    
+    #QRBox {
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.3);
+        display: none;
+        perspective: 400px;
+    }
+    
+    #MainBox {
+        cursor: pointer;
+        position: absolute;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        left: calc(50% - 100px);
+        top: calc(50% - 100px);
+        background: #fff no-repeat center center;
+        background-size: 190px;
+        border-radius: 6px;
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: all 1s ease-in-out;
+        transform-style: preserve-3d;
+        transform-origin: center center;
+        overflow: hidden;
+    }
+    
+    #github {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        right: 0;
+        margin-right: -15px;
+        margin-top: -15px;
+        background: no-repeat center center url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIGJhc2VQcm9maWxlPSJ0aW55IiBoZWlnaHQ9IjI0cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDxnPgogICAgICAgIDxnPgogICAgICAgICAgICA8cGF0aCBkPSJNMTQuNDM1LDEyLjk3M2MwLjI2OSwwLDAuNDkyLDAuMTMzLDAuNjg2LDAuMzk2YzAuMTkyLDAuMjY1LDAuMjk0LDAuNTg4LDAuMjk0LDAuOTc1YzAsMC4zODUtMC4xMDIsMC43MTEtMC4yOTQsMC45NzMgICAgYy0wLjE5MywwLjI2NS0wLjQxNywwLjM5Ni0wLjY4NiwwLjM5NmMtMC4yNzgsMC0wLjUyMi0wLjEzMS0wLjcxNS0wLjM5NmMtMC4xOTItMC4yNjItMC4yOTQtMC41ODgtMC4yOTQtMC45NzMgICAgYzAtMC4zODcsMC4xMDItMC43MSwwLjI5NC0wLjk3NUMxMy45MTIsMTMuMTA1LDE0LjE1NiwxMi45NzMsMTQuNDM1LDEyLjk3MyBNMTcuODc1LDkuNDE0QzE4LjYyMSwxMC4yMjUsMTksMTEuMjA5LDE5LDEyLjM2NyAgICBjMCwwLjc0OC0wLjA4NiwxLjQyMy0wLjI1OSwyLjAyM2MtMC4xNzUsMC41OTctMC4zOTQsMS4wODQtMC42NTQsMS40NTljLTAuMjY0LDAuMzc2LTAuNTg4LDAuNzA1LTAuOTc0LDAuOTg5ICAgIGMtMC4zODYsMC4yODYtMC43NDEsMC40OTItMS4wNjUsMC42MjNjLTAuMzI1LDAuMTMyLTAuNjk1LDAuMjMzLTEuMTExLDAuMzA2Yy0wLjQxNywwLjA3MS0wLjcyNiwwLjExMS0wLjk0MywwLjEyMyAgICBjLTAuMjEzLDAuMDA5LTAuNDM4LDAuMDE0LTAuNjg1LDAuMDE0Yy0wLjA1NSwwLTAuMjQzLDAuMDA0LTAuNTQ3LDAuMDE1Yy0wLjMwMSwwLjAxMy0wLjU2LDAuMDE2LTAuNzYyLDAuMDE2ICAgIHMtMC40NjEtMC4wMDMtMC43NjItMC4wMTZjLTAuMzA0LTAuMDExLTAuNDkyLTAuMDE1LTAuNTQ3LTAuMDE1Yy0wLjI0NiwwLTAuNDcyLTAuMDA1LTAuNjg1LTAuMDE0ICAgIGMtMC4yMTgtMC4wMTItMC41MjYtMC4wNTItMC45NDMtMC4xMjNjLTAuNDIzLTAuMDcyLTAuNzg2LTAuMTc0LTEuMTExLTAuMzA2Yy0wLjMyNC0wLjEzMS0wLjY4LTAuMzM3LTEuMDY0LTAuNjIzICAgIGMtMC4zODctMC4yODQtMC43MTEtMC42MTMtMC45NzUtMC45ODljLTAuMjYxLTAuMzc1LTAuNDc5LTAuODYyLTAuNjU0LTEuNDU5QzUuMDg2LDEzLjc5LDUsMTMuMTE1LDUsMTIuMzY3ICAgIGMwLTEuMTU4LDAuMzc5LTIuMTQzLDEuMTI1LTIuOTUzQzYuMDQzLDkuMzczLDYuMDQsOC45NjcsNi4xMTcsOC4xOTdDNi4xOCw3LjQyNiw2LjM0NCw2LjcxNSw2LjYxMiw2LjA2NSAgICBjMC45MzQsMC4wOTksMi4wOSwwLjYyOSwzLjQ3MSwxLjU4MUMxMC41NDksNy41MjcsMTEuMTg0LDcuNDYzLDEyLDcuNDYzYzAuODUyLDAsMS40OTEsMC4wNjQsMS45MTgsMC4xODQgICAgYzAuNjI5LTAuNDI1LDEuMjMtMC43NzEsMS44MDUtMS4wMzRjMC41ODQtMC4yNjEsMS4wMDUtMC40MTYsMS4yNjktMC40NTdsMC4zOTYtMC4wOWMwLjI3LDAuNjQ5LDAuNDM0LDEuMzYsMC40OTYsMi4xMzIgICAgQzE3Ljk2LDguOTY3LDE3Ljk1Nyw5LjM3MywxNy44NzUsOS40MTQgTTEyLjAzLDE3LjIzNGMxLjY4OCwwLDIuOTU0LTAuMjAyLDMuODIxLTAuNjA3YzAuODU1LTAuNDA0LDEuMjkyLTEuMjM4LDEuMjkyLTIuNDk2ICAgIGMwLTAuNzMtMC4yNzMtMS4zNC0wLjgyMi0xLjgyOGMtMC4yNzgtMC4yNjMtMC42MTMtMC40MjUtMC45ODktMC40ODZjLTAuMzc1LTAuMDYxLTAuOTQ5LTAuMDYxLTEuNzIsMCAgICBjLTAuNzY5LDAuMDYyLTEuMjk4LDAuMDktMS41ODIsMC4wOWMtMC4zODUsMC0wLjgtMC4wMTgtMS4zMTktMC4wNTljLTAuNTItMC4wNC0wLjkyOC0wLjA2NS0xLjIyMy0wLjA3OCAgICBjLTAuMjk0LTAuMDA5LTAuNjA5LDAuMDI3LTAuOTU4LDAuMTA4Yy0wLjM0NSwwLjA4Mi0wLjYyOSwwLjIyNC0wLjg1MywwLjQyNWMtMC41MjEsMC40NjktMC43OSwxLjA3Ny0wLjc5LDEuODI4ICAgIGMwLDEuMjU4LDAuNDI2LDIuMDkyLDEuMjgsMi40OTZjMC44NSwwLjQwNSwyLjExMywwLjYwNywzLjgwMiwwLjYwN0gxMi4wMyBNOS41OTYsMTIuOTczYzAuMjY4LDAsMC40OTIsMC4xMzMsMC42ODUsMC4zOTYgICAgYzAuMTkyLDAuMjY1LDAuMjk0LDAuNTg4LDAuMjk0LDAuOTc1YzAsMC4zODUtMC4xMDIsMC43MTEtMC4yOTQsMC45NzNjLTAuMTkyLDAuMjY1LTAuNDE3LDAuMzk2LTAuNjg1LDAuMzk2ICAgIGMtMC4yNzksMC0wLjUyMi0wLjEzMS0wLjcxNi0wLjM5NmMtMC4xOTItMC4yNjItMC4yOTQtMC41ODgtMC4yOTQtMC45NzNjMC0wLjM4NywwLjEwMi0wLjcxLDAuMjk0LTAuOTc1ICAgIEM5LjA3MywxMy4xMDUsOS4zMTYsMTIuOTczLDkuNTk2LDEyLjk3MyIKICAgICAgICAgICAgLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
+        background-size: contain;
+        opacity: 0.3;
+        transform: rotatez(45deg);
+        &:hover{
+            opacity: 1;
+        }
+    }
+    
+    #MainBox.showQR {
+        animation-name: showQR;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 300ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation: showQR 3s ease-in-out 300ms 1 normal forwards;
+    }
+    
+    @keyframes showQR {
+        from {
+            transform: rotateX(90deg);
+        }
+        8% {
+            opacity: 1;
+            transform: rotateX(-60deg);
+        }
+        18% {
+            opacity: 1;
+            transform: rotateX(40deg);
+        }
+        34% {
+            opacity: 1;
+            transform: rotateX(-28deg);
+        }
+        44% {
+            opacity: 1;
+            transform: rotateX(18deg);
+        }
+        58% {
+            opacity: 1;
+            transform: rotateX(-12deg);
+        }
+        72% {
+            opacity: 1;
+            transform: rotateX(9deg);
+        }
+        88% {
+            opacity: 1;
+            transform: rotateX(-5deg);
+        }
+        96% {
+            opacity: 1;
+            transform: rotateX(2deg);
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    #MainBox.hideQR {
+        opacity: 1;
+        animation-name: hideQR;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        -webkit-animation: hideQR 0.5s ease-in-out 0s 1 normal forwards;
+    }
+}
+
+
+
+@keyframes hideQR {
+	from {}
+	20%,
+	50% {
+		transform: scale(1.08, 1.08);
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		transform: rotateZ(40deg) scale(0.6, 0.6);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+#QRBox.fadeIn {
+	display: block;
+	animation: fadeIn 300ms;
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+#QRBox.fadeOut {
+	display: block;
+	animation: fadeOut 300ms;
+}

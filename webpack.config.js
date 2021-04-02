@@ -1,14 +1,39 @@
+const path = require('path')
 module.exports = {
     entry: './src/index.ts',
-    output: './dist/js-reward.js',
+    output: {
+        libraryTarget: 'umd',
+        filename: 'js-reward.js',
+    },
     resolve: {
-        extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.ts?$/,
-                loaders: 'ts-loader'
+                use: [
+                    { loader: 'ts-loader' }
+                ]
+            },
+            {
+                test: /\.scss?$/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                    { loader: 'sass-loader' },
+                ]
+            },
+            {
+                test: /\.(png|jpg|gif|jpe|svg?g)$/,
+                use: [
+                  {
+                    loader: 'url-loader',
+                    options: {
+                       limit: 28192,
+                       name:'images/[hash].[name].[ext]'
+                    }
+                  }
+                ]
             }
         ]
     }

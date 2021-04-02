@@ -4,8 +4,20 @@
     <meta charset="utf-8" />
     <title>起步</title>
     <script src="https://unpkg.com/lodash@4.17.20"></script>
+    <style>
+      #abcd {
+        margin-top: 100px;
+      }
+    </style>
   </head>
   <body>
+    <div id="abcd"></div>
     <script src="../dist/js-reward.js"></script>
+    <script>
+      const jsReward = new JsReward('abcd',[
+        { name: 'wechatpay', src: '../src/images/WeChanQR.png', type: 2 },
+        { name: 'alipay', src: '../src/images/AliPayQR.png', type: 2 }
+      ])
+    </script>
   </body>
 </html>
