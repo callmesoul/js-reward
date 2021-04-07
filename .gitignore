@@ -113,7 +113,7 @@ cypress/videos
 # Documentation
 ############################
 
-dist
+# dist
 
 ############################
 # Builds
