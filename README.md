@@ -11,7 +11,7 @@
 ## 安装
 1. npm 安装
 
-    `npm install js-reward --save`
+    `npm install @callmesoul/js-reward --save`
 
 2. 手动下载
    
@@ -24,7 +24,7 @@
     <div id="js-reward-warp"></div>
    ```
    ```javascript
-   import JsReward from 'js-reward'
+   import JsReward from '@callmesoul/js-reward'
    new JsReward(
        'js-reward-warp',
         [
