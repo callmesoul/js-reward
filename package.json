@@ -1,8 +1,8 @@
 {
   "name": "js-reward",
   "version": "0.0.1",
-  "description": "nices user reward component",
-  "main": "index.js",
+  "description": "nices user reward component/美观,易用，可定制的js打赏组件",
+  "main": "dist/js-reward.js",
   "scripts": {
     "build": "webpack --config webpack.config.js"
   },
