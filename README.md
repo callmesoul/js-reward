@@ -4,6 +4,8 @@
 修改自[Playing-reward](https://github.com/ihoey/Playing-reward)
 主要[Playing-reward](https://github.com/ihoey/Playing-reward)好像不维护了，也不可定制，使用麻烦等各种无问题，于是自己封装一个。
 
+[Demo](https://callmesoul.cn/posts/1d300b40-4102-11eb-b113-9717c2aea740/#js-reward-warp)
+
 ## 特点
 - [x] 使用简单
 - [x] 可定制
@@ -15,6 +17,7 @@
 
 2. 手动下载
    
+   `dist/js-reward.js`
    `dist/js-reward.js`
 
 ## 使用
